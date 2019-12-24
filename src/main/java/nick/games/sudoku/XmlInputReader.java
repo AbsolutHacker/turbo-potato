@@ -2,6 +2,7 @@ package nick.games.sudoku;
 
 import io.vavr.collection.Stream;
 import io.vavr.control.Try;
+import nick.games.sudoku.api.Number;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -19,6 +20,11 @@ public class XmlInputReader {
 
   private static final DocumentBuilder documentBuilder = Try.of(() -> DocumentBuilderFactory.newInstance().newDocumentBuilder()).get();
 
+
+  public static Stream<Number[][]> read(File file) {
+    return readPuzzles(file).map(XmlInputReader::readString).map(XmlInputReader::gridAlign);
+  }
+
   public static Stream<String> readPuzzles(File file) {
 
     try {
@@ -34,10 +40,6 @@ public class XmlInputReader {
       return null;
   }
 
-  public static Stream<Number[][]> read(File file) {
-    return readPuzzles(file).map(XmlInputReader::readString).map(XmlInputReader::gridAlign);
-  }
-
   static int numericValue(int digitSymbol) {
     if (digitSymbol >= '0' && digitSymbol <= '9') {
     return digitSymbol - '0';
@@ -50,13 +52,14 @@ public class XmlInputReader {
   }
 
   static Number[][] gridAlign(List<Number> numberList) {
-    if (numberList.size() != Board.SIZE * Board.SIZE) {
+    final int size = (int) Math.sqrt(numberList.size());
+    if (numberList.size() != size * size) {
       throw new IllegalArgumentException("illegal list size: " + numberList.size());
     }
-    Number[][] result = new Number[Board.SIZE][Board.SIZE];
+    Number[][] result = new Number[size][size];
     Iterator<Number> iterator = numberList.iterator();
-    for (int rowHead = 0; rowHead < Board.SIZE; rowHead++) {
-      for (int colHead = 0; colHead < Board.SIZE; colHead++) {
+    for (int rowHead = 0; rowHead < size; rowHead++) {
+      for (int colHead = 0; colHead < size; colHead++) {
         result[rowHead][colHead] = iterator.next();
       }
     }
