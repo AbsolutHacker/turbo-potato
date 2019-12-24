@@ -1,9 +1,6 @@
 package nick.games.sudoku;
 
-import io.vavr.Tuple2;
-import nick.games.sudoku.api.GameVariant;
 import nick.games.sudoku.api.RegularSudoku;
-import nick.games.sudoku.api.Solver;
 import nick.games.sudoku.api.Number;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,12 +8,10 @@ import org.junit.runners.Parameterized;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static nick.games.sudoku.Solvers.*;
 
 @RunWith(Parameterized.class)
-public class HashingSolverTest extends SolverTestUtilities {
-
-  private static final Solver unitUnderTest = Solvers.HashingSolver;
+public class ParameterizedSolverTest extends SolverTestUtilities {
 
   @Parameterized.Parameters
   public static List<Object[]> data() {
@@ -29,13 +24,19 @@ public class HashingSolverTest extends SolverTestUtilities {
   @Test
   public void test_hashingSolverOnly() {
     final Board<RegularSudoku> testBoard = new Board<>(new RegularSudoku(), puzzle);
-    timeBenchmark(testBoard, unitUnderTest);
+    timeBenchmark(testBoard, HashingSolver);
   }
 
   @Test
   public void test_bothSolvers() {
     final Board<RegularSudoku> testBoard = new Board<>(new RegularSudoku(), puzzle);
-    timeBenchmark(testBoard, unitUnderTest, Solvers.CompletingSolver);
+    timeBenchmark(testBoard, HashingSolver, CompletingSolver);
+  }
+
+  @Test
+  public void test_hashThriceThenComplete() {
+    final Board<RegularSudoku> testBoard = new Board<>(new RegularSudoku(), puzzle);
+    timeBenchmark(testBoard, HashingSolver, HashingSolver, HashingSolver, CompletingSolver);
   }
 
 }
