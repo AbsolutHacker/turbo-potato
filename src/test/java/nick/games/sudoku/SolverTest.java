@@ -9,9 +9,21 @@ import static nick.games.sudoku.Solvers.*;
 public class SolverTest {
 
   @Test
+  public void test_hashOnly() {
+    final Board<RegularSudoku> testBoard = new Board<>(new RegularSudoku(), TestData.easyGames.get(4));
+    timeBenchmark(testBoard, HashingSolver);
+  }
+
+  @Test
   public void test_hashAndComplete() {
     final Board<RegularSudoku> testBoard = new Board<>(new RegularSudoku(), TestData.easyGames.get(4));
     timeBenchmark(testBoard, HashingSolver, CompletingSolver);
+  }
+
+  @Test
+  public void test_hashAndCompleteAlternateSolver() {
+    final Board<RegularSudoku> testBoard = new Board<>(new RegularSudoku(), TestData.easyGames.get(4));
+    timeBenchmark(testBoard, HashingSolver, new ConstraintSolver<RegularSudoku>(testBoard));
   }
 
   @Test

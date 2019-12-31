@@ -2,13 +2,15 @@ package nick.games.sudoku;
 
 import io.vavr.collection.Stream;
 import nick.games.sudoku.api.GameVariant;
-import nick.games.sudoku.api.Number;
+import nick.games.sudoku.api.Digit;
 
 import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
+import static nick.games.sudoku.GenerischeDeduktion.*;
 
 public class Board<Variant extends GameVariant> {
 
@@ -21,7 +23,7 @@ public class Board<Variant extends GameVariant> {
   private final Set<Cell>[] columns;
   private final Set<Cell>[] quadrants;
 
-  public Board(Variant variant, Number[][] numbers) {
+  public Board(Variant variant, Digit[][] numbers) {
 
     this.variant = variant;
     this.SIZE = variant.entryValues().size();

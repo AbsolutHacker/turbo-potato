@@ -1,14 +1,14 @@
 package nick.games.sudoku;
 
-import static nick.games.sudoku.api.Number.*;
+import static nick.games.sudoku.api.Digit.*;
 
 import io.vavr.collection.List;
-import nick.games.sudoku.api.Number;
+import nick.games.sudoku.api.Digit;
 
 
 public final class TestData {
-  public static final List<Number[][]> easyGames = List.of(new Number[][][]{
-      new Number[][] {
+  public static final List<Digit[][]> easyGames = List.of(new Digit[][][]{
+      new Digit[][] {
           {THREE, SEVEN, NINE, null, null, null, null, ONE, FOUR},
           {null, SIX, null, null, ONE, null, null, SEVEN, null},
           {null, EIGHT, null, null, null, NINE, null, null, FIVE},
@@ -19,7 +19,7 @@ public final class TestData {
           {null, FOUR, null, null, EIGHT, null, null, FIVE, null},
           {EIGHT, FIVE, null, null, null, null, TWO, FOUR, NINE},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SEVEN, null, null, null, null, EIGHT, ONE, null},
           {null, null, null, THREE, ONE, EIGHT, NINE, null, TWO},
           {TWO, EIGHT, ONE, FOUR, SEVEN, null, null, null, FIVE},
@@ -30,7 +30,7 @@ public final class TestData {
           {ONE, null, SIX, NINE, EIGHT, TWO, null, null, null},
           {null, FIVE, SEVEN, null, null, null, null, FOUR, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, null, TWO, null, null, ONE, null},
           {FIVE, null, FOUR, null, ONE, EIGHT, NINE, SEVEN, TWO},
           {null, EIGHT, null, FOUR, null, NINE, null, null, FIVE},
@@ -41,7 +41,7 @@ public final class TestData {
           {ONE, FOUR, SIX, NINE, EIGHT, null, SEVEN, null, THREE},
           {null, FIVE, null, null, THREE, null, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, EIGHT, null, null, null, TWO, ONE, SIX, null},
           {null, null, null, null, SEVEN, SIX, TWO, null, null},
           {SIX, null, FIVE, null, null, EIGHT, null, null, null},
@@ -52,7 +52,7 @@ public final class TestData {
           {null, null, TWO, FOUR, SIX, null, null, null, null},
           {null, THREE, SEVEN, ONE, null, null, null, FIVE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, NINE, null, null, TWO, null, SIX, null},
           {null, null, FOUR, null, null, null, TWO, null, null},
           {null, TWO, null, THREE, ONE, EIGHT, NINE, SEVEN, null},
@@ -63,7 +63,7 @@ public final class TestData {
           {null, null, TWO, null, null, null, EIGHT, null, null},
           {null, THREE, null, ONE, null, null, SIX, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, EIGHT, NINE, null, null, TWO, null, SIX, THREE},
           {null, null, FOUR, null, SEVEN, SIX, TWO, null, FIVE},
           {null, null, null, THREE, null, EIGHT, NINE, null, FOUR},
@@ -74,7 +74,7 @@ public final class TestData {
           {FIVE, null, TWO, FOUR, SIX, null, EIGHT, null, null},
           {FOUR, THREE, null, ONE, null, null, SIX, FIVE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {SEVEN, EIGHT, null, FIVE, null, TWO, null, SIX, null},
           {null, null, null, null, SEVEN, null, null, null, FIVE},
           {null, TWO, null, THREE, ONE, null, NINE, SEVEN, null},
@@ -85,7 +85,7 @@ public final class TestData {
           {FIVE, null, null, null, SIX, null, null, null, null},
           {null, THREE, null, ONE, null, NINE, null, FIVE, TWO},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, EIGHT, null, FIVE, FOUR, null, ONE, SIX, null},
           {null, null, null, NINE, null, null, TWO, null, FIVE},
           {SIX, TWO, null, THREE, null, null, null, SEVEN, null},
@@ -96,7 +96,7 @@ public final class TestData {
           {FIVE, null, TWO, null, null, THREE, null, null, null},
           {null, THREE, SEVEN, null, EIGHT, NINE, null, FIVE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SIX, TWO, ONE, null, null, FOUR, EIGHT, null},
           {FOUR, null, THREE, null, EIGHT, null, null, NINE, SEVEN},
           {null, null, NINE, null, SEVEN, null, ONE, TWO, null},
@@ -107,7 +107,7 @@ public final class TestData {
           {ONE, TWO, null, null, FOUR, null, NINE, null, FIVE},
           {null, EIGHT, FOUR, null, null, FIVE, SEVEN, ONE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SIX, TWO, null, FIVE, null, FOUR, null, THREE},
           {null, null, THREE, SIX, null, TWO, FIVE, null, SEVEN},
           {null, null, null, FOUR, null, null, null, null, SIX},
@@ -118,7 +118,7 @@ public final class TestData {
           {ONE, null, SIX, SEVEN, null, EIGHT, NINE, null, null},
           {THREE, null, FOUR, null, SIX, null, SEVEN, ONE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {SEVEN, null, null, ONE, FIVE, null, null, null, null},
           {null, null, THREE, null, null, TWO, null, NINE, SEVEN},
           {EIGHT, null, null, FOUR, SEVEN, null, ONE, TWO, SIX},
@@ -129,7 +129,7 @@ public final class TestData {
           {ONE, TWO, null, SEVEN, null, null, NINE, null, null},
           {null, null, null, null, SIX, FIVE, null, null, TWO},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, TWO, null, null, NINE, FOUR, EIGHT, THREE},
           {null, null, null, SIX, EIGHT, null, null, null, null},
           {EIGHT, null, null, FOUR, null, THREE, ONE, null, null},
@@ -140,7 +140,7 @@ public final class TestData {
           {null, null, null, null, FOUR, EIGHT, null, null, null},
           {THREE, EIGHT, FOUR, NINE, null, null, SEVEN, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {NINE, null, FOUR, null, null, null, null, null, null},
           {FIVE, null, null, FOUR, THREE, null, ONE, SEVEN, EIGHT},
           {THREE, SEVEN, null, ONE, null, SIX, null, TWO, FOUR},
@@ -151,7 +151,7 @@ public final class TestData {
           {FOUR, NINE, FIVE, null, SIX, ONE, null, null, THREE},
           {null, null, null, null, null, null, FIVE, null, TWO},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, ONE, FOUR, null, null, EIGHT, THREE, SIX, null},
           {null, null, SIX, null, THREE, null, ONE, null, EIGHT},
           {null, SEVEN, EIGHT, ONE, null, null, NINE, null, FOUR},
@@ -162,7 +162,7 @@ public final class TestData {
           {FOUR, null, FIVE, null, SIX, null, SEVEN, null, null},
           {null, SIX, THREE, NINE, null, null, FIVE, FOUR, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, ONE, FOUR, SEVEN, null, EIGHT, THREE, null, null},
           {null, null, null, null, THREE, NINE, ONE, SEVEN, null},
           {THREE, SEVEN, null, null, null, SIX, null, null, FOUR},
@@ -173,7 +173,7 @@ public final class TestData {
           {null, NINE, FIVE, TWO, SIX, null, null, null, null},
           {null, null, THREE, NINE, null, SEVEN, FIVE, FOUR, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, TWO, EIGHT, NINE, null, null, SEVEN, null, ONE},
           {FIVE, null, null, SIX, null, null, EIGHT, null, null},
           {THREE, null, null, null, ONE, null, null, TWO, NINE},
@@ -184,7 +184,7 @@ public final class TestData {
           {null, null, SIX, null, null, THREE, null, null, TWO},
           {EIGHT, null, TWO, null, null, SIX, ONE, SEVEN, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {SIX, null, null, NINE, null, FOUR, SEVEN, FIVE, null},
           {FIVE, null, NINE, SIX, TWO, null, null, null, null},
           {THREE, null, null, FIVE, null, EIGHT, null, TWO, null},
@@ -195,7 +195,7 @@ public final class TestData {
           {null, null, null, null, SEVEN, THREE, NINE, null, TWO},
           {null, THREE, TWO, FOUR, null, SIX, null, null, FIVE},
       },
-      new Number[][] {
+      new Digit[][] {
           {SIX, TWO, null, NINE, null, FOUR, SEVEN, null, null},
           {null, null, NINE, SIX, null, SEVEN, EIGHT, null, THREE},
           {null, null, null, FIVE, null, null, null, null, NINE},
@@ -206,7 +206,7 @@ public final class TestData {
           {FOUR, null, SIX, ONE, null, THREE, NINE, null, null},
           {null, null, TWO, FOUR, null, SIX, null, SEVEN, FIVE},
       },
-      new Number[][] {
+      new Digit[][] {
           {NINE, null, null, THREE, null, FIVE, null, FOUR, null},
           {null, TWO, null, null, null, null, THREE, null, EIGHT},
           {null, THREE, null, null, FOUR, TWO, ONE, SEVEN, null},
@@ -217,7 +217,7 @@ public final class TestData {
           {EIGHT, null, TWO, null, null, null, null, NINE, null},
           {null, SEVEN, null, FIVE, null, FOUR, null, null, ONE},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, null, null, FIVE, null, null, null},
           {ONE, null, null, null, SIX, null, THREE, FIVE, EIGHT},
           {FIVE, THREE, null, null, FOUR, TWO, null, null, NINE},
@@ -228,7 +228,7 @@ public final class TestData {
           {EIGHT, FIVE, TWO, null, THREE, null, null, null, FOUR},
           {null, null, null, FIVE, null, null, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, EIGHT, null, THREE, null, FIVE, SIX, FOUR, null},
           {null, null, null, SEVEN, null, null, null, FIVE, null},
           {FIVE, null, null, EIGHT, FOUR, TWO, ONE, null, null},
@@ -239,7 +239,7 @@ public final class TestData {
           {null, FIVE, null, null, null, ONE, null, null, null},
           {null, SEVEN, NINE, FIVE, null, FOUR, null, THREE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, null, null, FIVE, null, FOUR, null},
           {ONE, null, FOUR, SEVEN, null, null, THREE, null, EIGHT},
           {null, THREE, SIX, null, null, TWO, null, null, NINE},
@@ -250,7 +250,7 @@ public final class TestData {
           {EIGHT, null, TWO, null, null, ONE, SEVEN, null, FOUR},
           {null, SEVEN, null, FIVE, null, null, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, THREE, EIGHT, null, ONE, null, null, null},
           {null, SEVEN, EIGHT, null, SIX, null, null, ONE, null},
           {SIX, null, FOUR, null, null, SEVEN, NINE, null, TWO},
@@ -261,7 +261,7 @@ public final class TestData {
           {null, EIGHT, null, null, FOUR, null, TWO, SIX, null},
           {null, null, null, THREE, null, TWO, SEVEN, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, NINE, THREE, null, null, null, SIX, null, SEVEN},
           {TWO, SEVEN, null, NINE, null, FOUR, THREE, null, null},
           {null, null, null, null, null, null, null, null, TWO},
@@ -272,7 +272,7 @@ public final class TestData {
           {null, null, SEVEN, ONE, null, FIVE, null, SIX, NINE},
           {ONE, null, NINE, null, null, null, SEVEN, FIVE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {FIVE, NINE, null, EIGHT, TWO, null, SIX, null, null},
           {TWO, null, null, null, null, FOUR, THREE, null, null},
           {null, ONE, FOUR, FIVE, null, SEVEN, NINE, null, null},
@@ -283,7 +283,7 @@ public final class TestData {
           {null, null, SEVEN, ONE, null, null, null, null, NINE},
           {null, null, NINE, null, EIGHT, TWO, null, FIVE, FOUR},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, EIGHT, TWO, null, null, FOUR, null},
           {TWO, null, null, NINE, null, FOUR, THREE, ONE, null},
           {null, ONE, null, FIVE, null, null, NINE, EIGHT, null},
@@ -294,7 +294,7 @@ public final class TestData {
           {null, EIGHT, SEVEN, ONE, null, FIVE, null, null, NINE},
           {null, SIX, null, null, EIGHT, TWO, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SEVEN, FOUR, null, FIVE, null, TWO, null, null},
           {NINE, null, FIVE, null, TWO, FOUR, null, null, null},
           {null, THREE, null, SEVEN, null, null, null, FIVE, null},
@@ -305,7 +305,7 @@ public final class TestData {
           {null, null, null, THREE, FOUR, null, NINE, null, SIX},
           {null, null, SEVEN, null, NINE, null, FIVE, FOUR, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, NINE, null, null, null, SIX, null},
           {NINE, SIX, null, null, TWO, FOUR, ONE, THREE, null},
           {EIGHT, THREE, TWO, null, ONE, null, FOUR, null, null},
@@ -316,7 +316,7 @@ public final class TestData {
           {null, TWO, ONE, THREE, FOUR, null, null, EIGHT, SIX},
           {null, EIGHT, null, null, null, ONE, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, NINE, FIVE, null, TWO, null, null},
           {null, SIX, FIVE, null, null, null, ONE, null, SEVEN},
           {EIGHT, null, null, SEVEN, null, SIX, FOUR, null, NINE},
@@ -327,7 +327,7 @@ public final class TestData {
           {FIVE, null, ONE, null, null, null, NINE, EIGHT, null},
           {null, null, SEVEN, null, NINE, ONE, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {ONE, null, SIX, NINE, null, FIVE, null, THREE, TWO},
           {NINE, null, FIVE, null, null, SIX, SEVEN, null, null},
           {null, EIGHT, null, ONE, SEVEN, null, FIVE, null, null},
@@ -338,7 +338,7 @@ public final class TestData {
           {null, null, EIGHT, THREE, null, null, SIX, null, FOUR},
           {SIX, FOUR, null, FIVE, null, NINE, ONE, null, THREE},
       },
-      new Number[][] {
+      new Digit[][] {
           {ONE, null, null, null, null, FIVE, EIGHT, THREE, null},
           {NINE, null, FIVE, EIGHT, null, SIX, SEVEN, null, ONE},
           {null, EIGHT, null, ONE, null, TWO, null, null, SIX},
@@ -349,7 +349,7 @@ public final class TestData {
           {FIVE, null, EIGHT, THREE, null, SEVEN, SIX, null, FOUR},
           {null, FOUR, TWO, FIVE, null, null, null, null, THREE},
       },
-      new Number[][] {
+      new Digit[][] {
           {ONE, null, SIX, NINE, null, null, null, null, null},
           {NINE, null, FIVE, null, null, null, SEVEN, FOUR, null},
           {null, EIGHT, null, ONE, SEVEN, null, FIVE, null, null},
@@ -360,7 +360,7 @@ public final class TestData {
           {null, NINE, EIGHT, null, null, null, SIX, null, FOUR},
           {null, null, null, null, null, NINE, ONE, null, THREE},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SEVEN, null, NINE, FOUR, null, null, null, null},
           {NINE, null, FIVE, null, null, null, null, FOUR, ONE},
           {null, EIGHT, THREE, ONE, SEVEN, null, FIVE, null, null},
@@ -371,7 +371,7 @@ public final class TestData {
           {FIVE, NINE, null, null, null, null, SIX, null, FOUR},
           {null, null, null, null, EIGHT, NINE, null, SEVEN, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, THREE, SIX, NINE, null, null, null, null},
           {null, ONE, FIVE, SEVEN, EIGHT, null, null, null, FOUR},
           {SEVEN, null, SIX, null, TWO, FIVE, NINE, null, null},
@@ -382,7 +382,7 @@ public final class TestData {
           {ONE, null, null, null, SIX, NINE, EIGHT, TWO, null},
           {null, null, null, null, SEVEN, EIGHT, ONE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, TWO, THREE, null, null, null, FIVE, null, null},
           {NINE, ONE, FIVE, SEVEN, EIGHT, null, null, null, null},
           {null, EIGHT, null, FOUR, TWO, null, null, THREE, null},
@@ -393,7 +393,7 @@ public final class TestData {
           {null, null, null, null, SIX, NINE, EIGHT, TWO, SEVEN},
           {null, null, NINE, null, null, null, ONE, FOUR, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {FOUR, TWO, null, SIX, null, null, FIVE, null, EIGHT},
           {null, null, null, SEVEN, null, THREE, TWO, SIX, FOUR},
           {SEVEN, null, null, null, null, null, NINE, null, null},
@@ -404,7 +404,7 @@ public final class TestData {
           {ONE, FIVE, FOUR, THREE, null, NINE, null, null, null},
           {TWO, null, NINE, null, null, EIGHT, null, FOUR, THREE},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, THREE, null, null, ONE, null, null, EIGHT},
           {NINE, null, FIVE, SEVEN, EIGHT, THREE, null, null, FOUR},
           {null, EIGHT, null, FOUR, TWO, null, null, null, null},
@@ -415,7 +415,7 @@ public final class TestData {
           {ONE, null, null, THREE, SIX, NINE, EIGHT, null, SEVEN},
           {TWO, null, null, FIVE, null, null, ONE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {TWO, null, SIX, SEVEN, null, THREE, null, FIVE, null},
           {FIVE, null, null, null, SIX, null, TWO, null, null},
           {null, null, EIGHT, ONE, null, null, FOUR, THREE, null},
@@ -426,7 +426,7 @@ public final class TestData {
           {null, null, ONE, null, SEVEN, null, null, null, THREE},
           {null, NINE, null, EIGHT, null, ONE, FIVE, null, FOUR},
       },
-      new Number[][] {
+      new Digit[][] {
           {TWO, null, null, SEVEN, FOUR, null, NINE, FIVE, EIGHT},
           {FIVE, null, null, NINE, null, null, null, null, ONE},
           {NINE, SEVEN, null, null, FIVE, null, FOUR, null, null},
@@ -437,7 +437,7 @@ public final class TestData {
           {FOUR, null, null, null, null, FIVE, null, null, THREE},
           {SIX, NINE, SEVEN, null, THREE, ONE, null, null, FOUR},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, ONE, null, SEVEN, FOUR, THREE, null, null, EIGHT},
           {null, THREE, null, null, null, EIGHT, null, SEVEN, ONE},
           {null, null, EIGHT, null, null, null, null, THREE, SIX},
@@ -448,7 +448,7 @@ public final class TestData {
           {FOUR, TWO, null, SIX, null, null, null, NINE, null},
           {SIX, null, null, EIGHT, THREE, ONE, null, TWO, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, SIX, null, null, THREE, NINE, null, null},
           {null, null, FOUR, null, SIX, null, TWO, SEVEN, null},
           {null, SEVEN, null, ONE, null, null, FOUR, THREE, null},
@@ -459,7 +459,7 @@ public final class TestData {
           {null, TWO, ONE, null, SEVEN, null, EIGHT, null, null},
           {null, null, SEVEN, EIGHT, null, null, FIVE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {FIVE, null, TWO, SIX, null, null, NINE, null, null},
           {THREE, FOUR, null, SEVEN, null, NINE, null, null, FIVE},
           {null, NINE, null, null, null, null, EIGHT, null, null},
@@ -470,7 +470,7 @@ public final class TestData {
           {TWO, null, null, THREE, null, EIGHT, null, NINE, SEVEN},
           {null, null, SEVEN, null, null, FIVE, TWO, null, SIX},
       },
-      new Number[][] {
+      new Digit[][] {
           {FIVE, ONE, TWO, SIX, null, THREE, null, SEVEN, null},
           {null, null, EIGHT, null, null, null, null, null, null},
           {null, NINE, SIX, null, null, FOUR, EIGHT, null, TWO},
@@ -481,7 +481,7 @@ public final class TestData {
           {null, null, null, null, null, null, FOUR, null, null},
           {null, THREE, null, NINE, null, FIVE, TWO, ONE, SIX},
       },
-      new Number[][] {
+      new Digit[][] {
           {FIVE, null, TWO, SIX, null, null, NINE, SEVEN, FOUR},
           {THREE, null, EIGHT, null, null, NINE, null, null, FIVE},
           {SEVEN, null, SIX, null, null, null, null, null, null},
@@ -492,7 +492,7 @@ public final class TestData {
           {TWO, null, null, THREE, null, null, FOUR, null, SEVEN},
           {EIGHT, THREE, SEVEN, null, null, FIVE, TWO, null, SIX},
       },
-      new Number[][] {
+      new Digit[][] {
           {FIVE, null, null, NINE, TWO, null, ONE, FOUR, null},
           {null, null, null, null, SEVEN, null, SIX, null, null},
           {EIGHT, FOUR, ONE, null, THREE, null, null, null, null},
@@ -503,7 +503,7 @@ public final class TestData {
           {null, null, SIX, null, ONE, null, null, null, null},
           {null, SEVEN, THREE, null, EIGHT, NINE, null, null, SIX},
       },
-      new Number[][] {
+      new Digit[][] {
           {FIVE, null, SEVEN, NINE, null, EIGHT, ONE, FOUR, null},
           {null, THREE, null, FOUR, null, ONE, null, null, FIVE},
           {EIGHT, null, ONE, null, THREE, null, null, null, null},
@@ -514,7 +514,7 @@ public final class TestData {
           {TWO, null, null, SEVEN, null, FOUR, null, THREE, null},
           {null, SEVEN, THREE, TWO, null, NINE, FIVE, null, SIX},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, SEVEN, NINE, TWO, EIGHT, null, FOUR, THREE},
           {null, null, null, null, null, ONE, SIX, EIGHT, null},
           {null, null, null, FIVE, null, null, NINE, SEVEN, null},
@@ -525,7 +525,7 @@ public final class TestData {
           {null, FIVE, SIX, SEVEN, null, null, null, null, null},
           {FOUR, SEVEN, null, TWO, EIGHT, NINE, FIVE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {FIVE, null, null, null, TWO, null, null, FOUR, null},
           {null, THREE, null, FOUR, SEVEN, ONE, null, EIGHT, null},
           {EIGHT, null, null, FIVE, THREE, null, null, null, null},
@@ -536,7 +536,7 @@ public final class TestData {
           {null, FIVE, null, SEVEN, ONE, FOUR, null, THREE, null},
           {null, SEVEN, null, null, EIGHT, null, null, null, SIX},
       },
-      new Number[][] {
+      new Digit[][] {
           {FIVE, SIX, SEVEN, null, TWO, null, null, FOUR, THREE},
           {NINE, THREE, null, null, SEVEN, null, SIX, null, null},
           {EIGHT, null, ONE, FIVE, null, null, null, SEVEN, TWO},
@@ -547,7 +547,7 @@ public final class TestData {
           {null, null, SIX, null, ONE, null, null, THREE, NINE},
           {FOUR, SEVEN, null, null, EIGHT, null, FIVE, ONE, SIX},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, null, null, NINE, ONE, SEVEN, EIGHT},
           {TWO, null, null, EIGHT, SIX, ONE, null, null, FIVE},
           {NINE, EIGHT, null, null, null, FOUR, TWO, null, SIX},
@@ -558,7 +558,7 @@ public final class TestData {
           {SEVEN, null, null, FOUR, ONE, THREE, null, null, TWO},
           {THREE, FOUR, TWO, NINE, null, null, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, FIVE, SIX, THREE, null, NINE, ONE, null, null},
           {TWO, null, null, null, null, ONE, NINE, FOUR, FIVE},
           {null, null, ONE, null, null, FOUR, null, THREE, null},
@@ -569,7 +569,7 @@ public final class TestData {
           {SEVEN, NINE, FIVE, FOUR, null, null, null, null, TWO},
           {null, null, TWO, NINE, null, SIX, FIVE, ONE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, FIVE, SIX, null, TWO, NINE, null, SEVEN, null},
           {TWO, null, SEVEN, null, SIX, null, NINE, null, null},
           {NINE, null, ONE, SEVEN, null, null, null, THREE, null},
@@ -580,7 +580,7 @@ public final class TestData {
           {null, null, FIVE, null, ONE, null, SIX, null, TWO},
           {null, FOUR, null, NINE, EIGHT, null, FIVE, ONE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {FOUR, FIVE, SIX, null, TWO, null, null, null, null},
           {null, THREE, null, null, null, ONE, NINE, null, null},
           {null, null, null, SEVEN, FIVE, null, TWO, THREE, null},
@@ -591,7 +591,7 @@ public final class TestData {
           {null, null, FIVE, FOUR, null, null, null, EIGHT, null},
           {null, null, null, null, EIGHT, null, FIVE, ONE, SEVEN},
       },
-      new Number[][] {
+      new Digit[][] {
           {FOUR, null, SIX, THREE, null, null, null, null, null},
           {TWO, null, null, null, SIX, null, NINE, FOUR, FIVE},
           {null, null, ONE, null, FIVE, FOUR, TWO, null, null},
@@ -602,7 +602,7 @@ public final class TestData {
           {SEVEN, NINE, FIVE, null, ONE, null, null, null, TWO},
           {null, null, null, null, null, SIX, FIVE, null, SEVEN},
       },
-      new Number[][] {
+      new Digit[][] {
           {SIX, null, null, null, null, null, null, null, ONE},
           {null, null, NINE, THREE, null, null, null, FOUR, SEVEN},
           {null, null, null, NINE, FOUR, TWO, SIX, null, THREE},
@@ -613,7 +613,7 @@ public final class TestData {
           {THREE, FIVE, null, null, null, NINE, ONE, null, null},
           {EIGHT, null, null, null, null, null, null, null, FOUR},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, THREE, SEVEN, FIVE, null, null, null, ONE},
           {null, null, null, THREE, null, SIX, null, null, SEVEN},
           {FIVE, null, null, NINE, null, null, null, EIGHT, THREE},
@@ -624,7 +624,7 @@ public final class TestData {
           {THREE, null, null, FOUR, null, NINE, null, null, null},
           {EIGHT, null, null, null, THREE, FIVE, NINE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {SIX, null, THREE, SEVEN, null, null, TWO, null, null},
           {TWO, EIGHT, null, null, null, null, FIVE, null, null},
           {null, SEVEN, null, NINE, FOUR, null, SIX, null, null},
@@ -635,7 +635,7 @@ public final class TestData {
           {null, null, SIX, null, null, null, null, TWO, EIGHT},
           {null, null, TWO, null, null, FIVE, NINE, null, FOUR},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, null, null, null, TWO, null, SEVEN},
           {null, null, null, EIGHT, FOUR, TWO, THREE, null, null},
           {null, FOUR, THREE, SEVEN, null, NINE, EIGHT, SIX, null},
@@ -646,7 +646,7 @@ public final class TestData {
           {null, null, EIGHT, THREE, SIX, FOUR, null, null, null},
           {FOUR, null, TWO, null, null, null, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, EIGHT, ONE, null, null, SIX, null, null, SEVEN},
           {null, null, SEVEN, EIGHT, FOUR, null, THREE, NINE, null},
           {null, null, null, SEVEN, null, null, EIGHT, null, FIVE},
@@ -657,7 +657,7 @@ public final class TestData {
           {null, ONE, EIGHT, null, SIX, FOUR, NINE, null, null},
           {FOUR, null, null, ONE, null, null, SIX, FIVE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, ONE, FIVE, null, SIX, TWO, null, null},
           {null, FIVE, null, null, FOUR, TWO, null, NINE, null},
           {null, null, THREE, SEVEN, ONE, null, EIGHT, null, null},
@@ -668,7 +668,7 @@ public final class TestData {
           {null, ONE, null, THREE, SIX, null, null, SEVEN, null},
           {null, null, TWO, ONE, null, EIGHT, SIX, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {NINE, null, ONE, FIVE, null, SIX, null, null, SEVEN},
           {SIX, null, SEVEN, null, FOUR, null, THREE, null, ONE},
           {TWO, FOUR, null, SEVEN, null, null, null, SIX, FIVE},
@@ -679,7 +679,7 @@ public final class TestData {
           {FIVE, null, EIGHT, null, SIX, null, NINE, null, TWO},
           {FOUR, null, null, ONE, null, EIGHT, SIX, null, THREE},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, ONE, FIVE, THREE, SIX, null, FOUR, SEVEN},
           {SIX, null, null, null, FOUR, null, null, null, ONE},
           {TWO, null, null, null, ONE, null, EIGHT, null, null},
@@ -690,7 +690,7 @@ public final class TestData {
           {FIVE, null, null, null, SIX, null, null, null, TWO},
           {FOUR, SEVEN, null, ONE, NINE, EIGHT, SIX, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {NINE, null, null, EIGHT, FIVE, THREE, null, null, FOUR},
           {null, null, null, FOUR, SIX, TWO, THREE, null, null},
           {TWO, THREE, null, null, SEVEN, null, null, null, FIVE},
@@ -701,7 +701,7 @@ public final class TestData {
           {null, null, ONE, THREE, TWO, EIGHT, null, null, null},
           {FOUR, null, null, SIX, ONE, FIVE, null, null, EIGHT},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SEVEN, SIX, EIGHT, FIVE, null, null, TWO, null},
           {ONE, null, EIGHT, FOUR, null, null, null, null, null},
           {null, THREE, FOUR, ONE, SEVEN, null, null, null, FIVE},
@@ -712,7 +712,7 @@ public final class TestData {
           {null, null, null, null, null, EIGHT, FOUR, null, SIX},
           {null, TWO, null, null, ONE, FIVE, NINE, SEVEN, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SEVEN, SIX, EIGHT, null, null, null, TWO, FOUR},
           {ONE, null, null, FOUR, SIX, null, THREE, null, null},
           {TWO, null, FOUR, null, null, null, null, SIX, FIVE},
@@ -723,7 +723,7 @@ public final class TestData {
           {null, null, ONE, null, TWO, EIGHT, null, null, SIX},
           {FOUR, TWO, null, null, null, FIVE, NINE, SEVEN, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SEVEN, SIX, null, FIVE, null, null, TWO, null},
           {null, null, EIGHT, FOUR, null, TWO, THREE, null, null},
           {TWO, THREE, FOUR, ONE, SEVEN, NINE, null, SIX, null},
@@ -734,7 +734,7 @@ public final class TestData {
           {null, null, ONE, THREE, null, EIGHT, FOUR, null, null},
           {null, TWO, null, null, ONE, null, NINE, SEVEN, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, SIX, EIGHT, FIVE, null, ONE, TWO, null},
           {null, FIVE, null, null, null, TWO, THREE, null, SEVEN},
           {null, THREE, FOUR, ONE, SEVEN, null, EIGHT, null, FIVE},
@@ -745,7 +745,7 @@ public final class TestData {
           {SEVEN, null, ONE, THREE, null, null, null, FIVE, null},
           {null, TWO, THREE, null, ONE, FIVE, NINE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {NINE, null, null, ONE, FOUR, SEVEN, null, null, TWO},
           {ONE, null, null, null, TWO, null, SEVEN, NINE, null},
           {null, EIGHT, TWO, null, NINE, null, null, null, FIVE},
@@ -756,7 +756,7 @@ public final class TestData {
           {null, ONE, SIX, null, EIGHT, null, null, null, THREE},
           {THREE, null, null, SEVEN, SIX, ONE, null, null, NINE},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SIX, FIVE, ONE, null, null, null, THREE, null},
           {ONE, null, null, null, TWO, EIGHT, SEVEN, NINE, SIX},
           {null, EIGHT, null, SIX, null, null, null, null, null},
@@ -767,7 +767,7 @@ public final class TestData {
           {FOUR, ONE, SIX, TWO, EIGHT, null, null, null, THREE},
           {null, FIVE, null, null, null, ONE, TWO, FOUR, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, FIVE, ONE, null, null, EIGHT, null, null},
           {null, THREE, null, null, TWO, EIGHT, null, NINE, SIX},
           {null, null, TWO, SIX, NINE, null, null, null, FIVE},
@@ -778,7 +778,7 @@ public final class TestData {
           {FOUR, ONE, null, TWO, EIGHT, null, null, SEVEN, null},
           {null, null, EIGHT, null, null, ONE, TWO, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {NINE, SIX, null, ONE, null, SEVEN, null, null, null},
           {null, THREE, FOUR, null, TWO, EIGHT, SEVEN, NINE, SIX},
           {SEVEN, null, null, null, null, THREE, null, ONE, FIVE},
@@ -789,7 +789,7 @@ public final class TestData {
           {FOUR, ONE, SIX, TWO, EIGHT, null, FIVE, SEVEN, null},
           {null, null, null, SEVEN, null, ONE, null, FOUR, NINE},
       },
-      new Number[][] {
+      new Digit[][] {
           {EIGHT, null, SIX, null, NINE, null, null, FOUR, null},
           {FIVE, null, null, SEVEN, FOUR, null, SIX, EIGHT, null},
           {null, SEVEN, FOUR, null, ONE, null, null, TWO, null},
@@ -800,7 +800,7 @@ public final class TestData {
           {null, FOUR, EIGHT, null, SIX, SEVEN, null, null, TWO},
           {null, TWO, null, null, EIGHT, null, SEVEN, null, FOUR},
       },
-      new Number[][] {
+      new Digit[][] {
           {EIGHT, THREE, null, TWO, null, null, null, FOUR, SEVEN},
           {FIVE, ONE, null, null, null, null, null, EIGHT, null},
           {null, null, null, EIGHT, null, SIX, null, TWO, THREE},
@@ -811,7 +811,7 @@ public final class TestData {
           {null, FOUR, null, null, null, null, null, NINE, TWO},
           {THREE, TWO, null, null, null, ONE, null, SIX, FOUR},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, null, null, FIVE, null, FOUR, SEVEN},
           {FIVE, null, null, SEVEN, null, THREE, null, null, NINE},
           {null, SEVEN, FOUR, EIGHT, ONE, null, null, null, THREE},
@@ -822,7 +822,7 @@ public final class TestData {
           {ONE, null, null, FIVE, null, SEVEN, null, null, TWO},
           {THREE, TWO, null, NINE, null, null, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, null, null, FIVE, ONE, null, null},
           {FIVE, null, null, SEVEN, FOUR, null, SIX, null, null},
           {null, SEVEN, null, EIGHT, ONE, SIX, FIVE, null, null},
@@ -833,7 +833,7 @@ public final class TestData {
           {null, null, EIGHT, null, SIX, SEVEN, null, null, TWO},
           {null, null, FIVE, NINE, null, null, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, THREE, null, null, null, FIVE, ONE, null, null},
           {null, null, TWO, SEVEN, null, null, SIX, EIGHT, null},
           {null, null, null, EIGHT, ONE, null, null, TWO, null},
@@ -844,7 +844,7 @@ public final class TestData {
           {null, FOUR, EIGHT, null, null, SEVEN, THREE, null, null},
           {null, null, FIVE, NINE, null, null, null, SIX, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, FOUR, null, null, SEVEN, FIVE, NINE, null, null},
           {NINE, null, ONE, null, EIGHT, THREE, FIVE, FOUR, null},
           {null, null, SEVEN, FOUR, SIX, null, EIGHT, null, null},
@@ -855,7 +855,7 @@ public final class TestData {
           {null, TWO, EIGHT, THREE, NINE, null, FOUR, null, FIVE},
           {null, null, SIX, FIVE, TWO, null, null, ONE, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {EIGHT, FOUR, null, ONE, null, null, null, TWO, SIX},
           {NINE, null, ONE, null, null, null, FIVE, null, null},
           {null, null, null, FOUR, SIX, null, null, null, ONE},
@@ -866,7 +866,7 @@ public final class TestData {
           {null, null, EIGHT, null, null, null, FOUR, null, FIVE},
           {FOUR, SEVEN, null, null, null, EIGHT, null, ONE, NINE},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, THREE, ONE, null, null, null, null, null},
           {NINE, null, ONE, null, EIGHT, THREE, null, null, null},
           {TWO, FIVE, SEVEN, FOUR, SIX, null, EIGHT, null, null},
@@ -877,7 +877,7 @@ public final class TestData {
           {null, null, null, THREE, NINE, null, FOUR, null, FIVE},
           {null, null, null, null, null, EIGHT, THREE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {SEVEN, FOUR, null, null, null, null, null, SIX, null},
           {null, null, null, THREE, SIX, EIGHT, null, FIVE, null},
           {null, SIX, null, null, SEVEN, null, THREE, NINE, null},
@@ -888,7 +888,7 @@ public final class TestData {
           {null, EIGHT, null, FIVE, TWO, NINE, null, null, null},
           {null, FIVE, null, null, null, null, null, FOUR, SEVEN},
       },
-      new Number[][] {
+      new Digit[][] {
           {SEVEN, FOUR, null, TWO, NINE, null, ONE, null, null},
           {ONE, null, NINE, null, null, EIGHT, SEVEN, FIVE, null},
           {null, null, null, FOUR, null, null, null, NINE, TWO},
@@ -899,7 +899,7 @@ public final class TestData {
           {null, EIGHT, SEVEN, FIVE, null, null, SIX, null, THREE},
           {null, null, TWO, null, EIGHT, SIX, null, FOUR, SEVEN},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, THREE, TWO, null, null, ONE, null, null},
           {ONE, null, null, THREE, SIX, EIGHT, null, FIVE, null},
           {null, SIX, null, null, null, ONE, null, null, TWO},
@@ -910,7 +910,7 @@ public final class TestData {
           {null, EIGHT, null, FIVE, TWO, NINE, null, null, THREE},
           {null, null, TWO, null, null, SIX, NINE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, FOUR, null, TWO, null, null, ONE, SIX, EIGHT},
           {null, null, NINE, THREE, SIX, EIGHT, SEVEN, null, null},
           {null, SIX, null, null, null, null, null, null, TWO},
@@ -921,7 +921,7 @@ public final class TestData {
           {null, null, SEVEN, FIVE, TWO, NINE, SIX, null, null},
           {THREE, FIVE, TWO, null, null, SIX, null, FOUR, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, SIX, null, null, TWO, null, null, null},
           {null, TWO, ONE, null, FIVE, null, THREE, null, null},
           {FOUR, EIGHT, null, null, null, THREE, SIX, null, TWO},
@@ -932,7 +932,7 @@ public final class TestData {
           {null, null, FOUR, null, SIX, null, ONE, TWO, null},
           {null, null, null, SEVEN, null, null, NINE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, SIX, EIGHT, NINE, null, SEVEN, null, FOUR},
           {null, null, null, null, null, null, null, EIGHT, NINE},
           {FOUR, null, null, ONE, SEVEN, null, SIX, FIVE, null},
@@ -943,7 +943,7 @@ public final class TestData {
           {NINE, SEVEN, null, null, null, null, null, null, null},
           {ONE, null, EIGHT, null, TWO, FIVE, NINE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {THREE, FIVE, SIX, null, null, TWO, null, ONE, null},
           {SEVEN, null, ONE, null, FIVE, SIX, THREE, null, null},
           {null, null, null, null, null, null, null, null, null},
@@ -954,7 +954,7 @@ public final class TestData {
           {null, null, FOUR, THREE, SIX, null, ONE, null, FIVE},
           {null, THREE, null, SEVEN, null, null, NINE, FOUR, SIX},
       },
-      new Number[][] {
+      new Digit[][] {
           {THREE, null, null, EIGHT, NINE, null, SEVEN, null, null},
           {SEVEN, TWO, ONE, FOUR, null, SIX, THREE, EIGHT, null},
           {null, EIGHT, null, ONE, null, null, null, null, TWO},
@@ -965,7 +965,7 @@ public final class TestData {
           {null, SEVEN, FOUR, THREE, null, EIGHT, ONE, TWO, FIVE},
           {null, null, EIGHT, null, TWO, FIVE, null, null, SIX},
       },
-      new Number[][] {
+      new Digit[][] {
           {ONE, EIGHT, null, null, THREE, SIX, null, null, null},
           {FOUR, null, null, null, null, null, THREE, FIVE, null},
           {null, SIX, null, null, FOUR, SEVEN, EIGHT, ONE, TWO},
@@ -976,7 +976,7 @@ public final class TestData {
           {null, NINE, EIGHT, null, null, null, null, null, FIVE},
           {null, null, null, SIX, EIGHT, null, null, SEVEN, NINE},
       },
-      new Number[][] {
+      new Digit[][] {
           {ONE, null, null, TWO, THREE, SIX, NINE, null, null},
           {null, null, null, null, null, null, THREE, FIVE, null},
           {null, SIX, null, FIVE, FOUR, null, EIGHT, null, null},
@@ -987,7 +987,7 @@ public final class TestData {
           {null, NINE, EIGHT, null, null, null, null, null, null},
           {null, null, FOUR, SIX, EIGHT, TWO, null, null, NINE},
       },
-      new Number[][] {
+      new Digit[][] {
           {ONE, null, null, null, THREE, SIX, null, FOUR, SEVEN},
           {null, TWO, null, null, null, null, THREE, null, SIX},
           {null, null, null, FIVE, FOUR, null, EIGHT, null, null},
@@ -998,7 +998,7 @@ public final class TestData {
           {SIX, null, EIGHT, null, null, null, null, THREE, null},
           {THREE, FIVE, null, SIX, EIGHT, null, null, null, NINE},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, null, TWO, THREE, null, null, FOUR, null},
           {null, null, null, null, null, NINE, null, null, null},
           {NINE, SIX, THREE, FIVE, FOUR, null, EIGHT, null, TWO},
@@ -1009,7 +1009,7 @@ public final class TestData {
           {null, null, null, ONE, null, null, null, null, null},
           {null, FIVE, null, null, EIGHT, TWO, null, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, FIVE, TWO, null, null, null, null, SEVEN},
           {null, null, null, null, null, NINE, THREE, FIVE, null},
           {NINE, null, THREE, FIVE, FOUR, null, null, ONE, TWO},
@@ -1020,7 +1020,7 @@ public final class TestData {
           {null, NINE, EIGHT, ONE, null, null, null, null, null},
           {THREE, null, null, null, null, TWO, ONE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {SEVEN, null, null, null, null, null, TWO, FIVE, null},
           {EIGHT, FIVE, null, null, null, SEVEN, null, THREE, null},
           {null, null, FOUR, EIGHT, null, TWO, null, null, SEVEN},
@@ -1031,7 +1031,7 @@ public final class TestData {
           {null, TWO, null, SEVEN, null, null, null, SIX, THREE},
           {null, SEVEN, NINE, null, null, null, null, null, FOUR},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, NINE, ONE, null, null, THREE, null, FIVE, null},
           {EIGHT, null, TWO, null, null, null, null, null, null},
           {null, null, FOUR, EIGHT, FIVE, null, ONE, null, SEVEN},
@@ -1042,7 +1042,7 @@ public final class TestData {
           {null, null, null, null, null, null, NINE, null, THREE},
           {null, SEVEN, null, THREE, null, null, FIVE, TWO, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, null, ONE, FOUR, null, null, null, FIVE, EIGHT},
           {EIGHT, null, TWO, ONE, null, null, null, null, SIX},
           {null, null, FOUR, null, FIVE, TWO, ONE, null, SEVEN},
@@ -1053,7 +1053,7 @@ public final class TestData {
           {FOUR, null, null, null, null, FIVE, NINE, null, THREE},
           {ONE, SEVEN, null, null, null, SIX, FIVE, null, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, NINE, null, FOUR, SIX, null, null, null, EIGHT},
           {EIGHT, FIVE, TWO, null, NINE, SEVEN, null, THREE, null},
           {null, null, null, null, null, TWO, null, NINE, SEVEN},
@@ -1064,7 +1064,7 @@ public final class TestData {
           {null, TWO, null, SEVEN, ONE, null, NINE, SIX, THREE},
           {ONE, null, null, null, EIGHT, SIX, null, TWO, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, NINE, ONE, FOUR, null, THREE, null, FIVE, EIGHT},
           {null, null, null, null, NINE, null, FOUR, null, SIX},
           {null, SIX, null, EIGHT, null, null, ONE, null, SEVEN},
@@ -1075,7 +1075,7 @@ public final class TestData {
           {FOUR, null, EIGHT, null, ONE, null, null, null, null},
           {ONE, SEVEN, null, THREE, null, SIX, FIVE, TWO, null},
       },
-      new Number[][] {
+      new Digit[][] {
           {EIGHT, SEVEN, TWO, null, null, null, null, THREE, null},
           {null, null, SIX, null, null, THREE, null, null, TWO},
           {null, FOUR, null, ONE, null, SIX, NINE, SEVEN, null},
@@ -1086,7 +1086,7 @@ public final class TestData {
           {ONE, null, null, SIX, null, null, EIGHT, null, null},
           {null, TWO, null, null, null, null, FOUR, SIX, SEVEN},
       },
-      new Number[][] {
+      new Digit[][] {
           {EIGHT, null, TWO, NINE, null, FIVE, null, THREE, null},
           {NINE, null, SIX, null, null, THREE, null, null, TWO},
           {THREE, FOUR, null, null, TWO, SIX, null, null, null},
@@ -1097,7 +1097,7 @@ public final class TestData {
           {ONE, null, null, SIX, null, null, EIGHT, null, NINE},
           {null, TWO, null, THREE, null, EIGHT, FOUR, null, SEVEN},
       },
-      new Number[][] {
+      new Digit[][] {
           {null, SEVEN, TWO, null, null, null, null, null, null},
           {NINE, ONE, SIX, null, EIGHT, null, null, null, null},
           {THREE, FOUR, FIVE, null, TWO, null, null, SEVEN, null},

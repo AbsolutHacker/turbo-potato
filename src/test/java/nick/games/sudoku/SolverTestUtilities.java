@@ -7,8 +7,8 @@ import nick.games.sudoku.api.Solver;
 import static org.junit.Assert.fail;
 
 public class SolverTestUtilities {
-  private static final long MAX_TIME_NANOSECONDS = 3_000_000_000L;
-  private static final int MAX_ITERATIONS = 10;
+  private static final long MAX_TIME_NANOSECONDS = 1_000_000_000L;
+  private static final int MAX_ITERATIONS = 5;
 
   public static <EntryType extends Enum<EntryType>, GroupType extends Enum<GroupType>, T extends GameVariant<EntryType, GroupType>> Tuple2<Integer, Long> timeBenchmark(Board<T> board, Solver... solvers) {
     System.out.println("Initial board:" + board.toString());

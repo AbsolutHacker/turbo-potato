@@ -1,7 +1,7 @@
 package nick.games.sudoku;
 
 import nick.games.sudoku.api.RegularSudoku;
-import nick.games.sudoku.api.Number;
+import nick.games.sudoku.api.Digit;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -19,7 +19,7 @@ public class ParameterizedSolverTest extends SolverTestUtilities {
   }
 
   @Parameterized.Parameter
-  public Number[][] puzzle;
+  public Digit[][] puzzle;
 
   @Test
   public void test_hashingSolverOnly() {

@@ -2,10 +2,10 @@ package nick.games.sudoku.api;
 
 import io.vavr.collection.Stream;
 
-public class RegularSudoku implements GameVariant<Number, SquareGridGroup> {
+public class RegularSudoku implements GameVariant<Digit, SquareGridGroup> {
   @Override
-  public Stream<Number> entryValues() {
-    return Stream.of(Number.values());
+  public Stream<Digit> entryValues() {
+    return Stream.of(Digit.values());
   }
 
   @Override

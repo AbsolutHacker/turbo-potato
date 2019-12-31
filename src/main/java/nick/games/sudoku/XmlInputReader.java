@@ -2,7 +2,7 @@ package nick.games.sudoku;
 
 import io.vavr.collection.Stream;
 import io.vavr.control.Try;
-import nick.games.sudoku.api.Number;
+import nick.games.sudoku.api.Digit;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -21,7 +21,7 @@ public class XmlInputReader {
   private static final DocumentBuilder documentBuilder = Try.of(() -> DocumentBuilderFactory.newInstance().newDocumentBuilder()).get();
 
 
-  public static Stream<Number[][]> read(File file) {
+  public static Stream<Digit[][]> read(File file) {
     return readPuzzles(file).map(XmlInputReader::readString).map(XmlInputReader::gridAlign);
   }
 
@@ -47,17 +47,17 @@ public class XmlInputReader {
       throw new IllegalArgumentException("out of range");
   }
 
-  static List<Number> readString(String numberString) {
-    return numberString.chars().map(XmlInputReader::numericValue).mapToObj(Number::fromInt).collect(Collectors.toList());
+  static List<Digit> readString(String numberString) {
+    return numberString.chars().map(XmlInputReader::numericValue).mapToObj(Digit::fromInt).collect(Collectors.toList());
   }
 
-  static Number[][] gridAlign(List<Number> numberList) {
+  static Digit[][] gridAlign(List<Digit> numberList) {
     final int size = (int) Math.sqrt(numberList.size());
     if (numberList.size() != size * size) {
       throw new IllegalArgumentException("illegal list size: " + numberList.size());
     }
-    Number[][] result = new Number[size][size];
-    Iterator<Number> iterator = numberList.iterator();
+    Digit[][] result = new Digit[size][size];
+    Iterator<Digit> iterator = numberList.iterator();
     for (int rowHead = 0; rowHead < size; rowHead++) {
       for (int colHead = 0; colHead < size; colHead++) {
         result[rowHead][colHead] = iterator.next();

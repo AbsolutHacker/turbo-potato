@@ -1,35 +1,39 @@
 package nick.games.sudoku;
 
+import io.vavr.collection.HashSet;
+import io.vavr.collection.List;
+import io.vavr.collection.Seq;
 import io.vavr.collection.Stream;
 import io.vavr.control.Option;
-import nick.games.sudoku.api.Number;
+import nick.games.sudoku.api.CellGroup;
+import nick.games.sudoku.api.Digit;
 
 import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
 
-public class CellImpl implements Cell {
+public class CellImpl implements CellGroup {
 
-  private final Set<Number> candidates;
+  private final Set<Digit> candidates;
 
-  private final Set<Cell> row;
-  private final Set<Cell> column;
-  private final Set<Cell> quadrant;
+  private final Seq<? extends Seq<CellGroup>> groups;
 
-  public CellImpl(Number solution, Set<Cell> row, Set<Cell> column, Set<Cell> quadrant) {
+  public CellImpl(Digit solution, Set<CellGroup> row, Set<CellGroup> column, Set<CellGroup> quadrant) {
+    this(solution, List.of(row, column, quadrant));
+  }
+
+  public CellImpl(Digit solution, Seq<? extends Seq<CellGroup>> groups) {
     if (solution == null) {
-      this.candidates = EnumSet.allOf(Number.class);
+      this.candidates = EnumSet.allOf(Digit.class);
     } else {
       this.candidates = Collections.singleton(solution);
     }
 
-    this.row = row;
-    this.column = column;
-    this.quadrant = quadrant;
+    this.groups = groups;
   }
 
   @Override
-  public Option<Number> solution() {
+  public Option<Digit> solution() {
     return Option.when(candidates.size() == 1, candidates.iterator().next());
   }
 
@@ -39,46 +43,36 @@ public class CellImpl implements Cell {
   }
 
   @Override
-  public Option<Number> exclude(Set<Number> nonCandidates) {
-    candidates.removeAll(nonCandidates);
-    return solution();
-  }
-
-  @Override
-  public Option<Number> exclude(Number nonCandidate) {
+  public Option<Digit> exclude(Digit nonCandidate) {
     candidates.remove(nonCandidate);
     return solution();
   }
 
   @Override
-  public void solve(Number solution) {
+  public void solve(Digit solution) {
     candidates.clear();
     candidates.add(solution);
   }
 
   @Override
-  public Stream<Number> candidates() {
+  public Stream<Digit> candidates() {
     return Stream.ofAll(candidates);
   }
 
   @Override
-  public Stream<Stream<Cell>> groups() {
-    return Stream.of(row(), column(), quadrant());
+  public Stream<? extends Seq<CellGroup>> groups() {
+    return Stream.ofAll(groups);
   }
 
   @Override
-  public Stream<Cell> row() {
-    return Stream.ofAll(row);
+  public Stream<? extends CellGroup> members() {
+    return null;
   }
 
   @Override
-  public Stream<Cell> column() {
-    return Stream.ofAll(column);
-  }
+  public Stream<Digit> exclusions() {
 
-  @Override
-  public Stream<Cell> quadrant() {
-    return Stream.ofAll(quadrant);
+    return null;
   }
 
   @Override
